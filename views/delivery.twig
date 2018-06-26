@@ -1,0 +1,27 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Livraison | Los Gustos' %}
+{% set footerClass = 'hide' %}
+
+{% block content %}
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="upper bold is-size-3 mg-b3 has-text-centered">adresse de livraison</h1>
+      <form class="mauto-w" action="/pay" id="delivery-form">
+        <div class="half-inputs">
+          <input type="text" name="" placeholder="Nom">
+          <input type="text" name="" placeholder="Prénom">
+        </div>
+        <input type="text" name="" placeholder="Adresse" class="full-w mg-t2">
+        <div class="half-inputs">
+          <input type="text" name="" placeholder="Ville" class="mg-t2">
+          <input type="text" name="" placeholder="Code Postale" class="mg-t2">
+        </div>
+        <input type="text" name="" placeholder="Téléphone" class="full-w mg-t2">
+        <input type="submit" name="" value="continuer" class="upper bold btn mainbtn block mauto-w mg-t2 pd-l3 pd-r3 is-size-5">
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: HellsRider;
+  src: url("../fonts/HellsRider.ttf");
+}
+
+body {
+  font-family: Futura !important;
+  color: map-get($colors, black) !important;
+}
+
+.text {
+  &__is-white {
+    color: map-get($colors, white) !important;
+  }
+
+  &__is-black {
+    color: map-get($colors, black) !important;
+  }
+
+  &__is-red {
+    color: map-get($colors, red) !important;
+  }
+
+  &__is-yellow {
+    color: map-get($colors, yellow) !important;
+  }
+
+  &__is-green {
+    color: map-get($colors, green) !important;
+  }
+}
+
+.is-rider {
+  font-family: HellsRider;
+}

@@ -1,0 +1,78 @@
+input,
+textarea {
+  background: #EDEDED;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  resize: none;
+  box-sizing: border-box;
+  font-weight: 900;
+  font-size: 14px;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0,0, 0.9);
+    font-weight: bold;
+  }
+}
+
+label {
+  font-size: 16px;
+}
+
+.half-inputs {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 49%;
+  }
+}
+
+#delivery-form {
+  max-width: 600px;
+}
+
+#pay-form {
+  input {
+    &[name="credit-number"] {
+      width: 300px;
+    }
+
+    &[name="credit-CVC"] {
+      width: 100px;
+    }
+  }
+
+  select {
+    padding: 5px;
+    height: 40px;
+    background: #EDEDED;
+    border: none;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &[name="credit-expiration-month"] {
+      width: 50px;
+    }
+
+    &[name="credit-expiration-year"] {
+      width: 70px;
+    }
+  }
+}

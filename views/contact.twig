@@ -1,0 +1,37 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Los Gustos' %}
+
+{% block content %}
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="upper is-size-1 mg-b2 has-text-centered bold mg-b4">contact</h1>
+      <div class="columns">
+        <div class="column">
+          <span class="block"><i class="fas fa-map-marker-alt"></i> 10 rue de la pierre levée, 75011, Paris</span>
+          <span class="block"><i class="fas fa-phone"></i> 06.56.81.45.37</span>
+          <span class="block"><i class="fas fa-at"></i> alexandre.betourne.pro@gmail.com</span>
+        </div>
+        <div class="column">
+          <form class="" action="index.html" method="post">
+            <div class="">
+              <label for="name" class="upper bold">nom</label>
+              <input type="text" class="full-w" id="name">
+            </div>
+            <div class="mg-t2">
+              <label for="email" class="upper bold">email</label>
+              <input type="text" class="full-w" id="email">
+            </div>
+            <div class="mg-t2">
+              <label for="text" class="upper bold">message</label>
+              <textarea name="name" id="text" class="full-w" rows="8" cols="80"></textarea>
+            </div>
+            <input type="submit"  class="mainbtn mg-t2 bold upper full-w is-size-6" name="" value="Envoyer">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

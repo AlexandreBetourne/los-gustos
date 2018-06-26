@@ -1,0 +1,28 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Panier | Los Gustos' %}
+{% set footerClass = 'hide' %}
+
+{% block content %}
+  <main id="cart">
+    <section class="section">
+      <div class="container">
+        <h1 class="upper is-size-2 is-size-3-mobile bold mg-b3">panier</h1>
+        <div class="columns">
+          <div class="column is-8" id="summary"></div>
+          <div class="column is-1"></div>
+          <div class="column is-3 totalPrice">
+            <div class="flex space-between">
+              <span class="bold is-size-4">TOTAL</span>
+              <p class="bold is-size-4"><span id="innerTotalPrice"></span>€</p>
+            </div>
+            <a href="/delivery" class="btn mainbtn full-w block upper bold is-size-4 mg-t4">confirmer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="static/js/billing.js" charset="utf-8"></script>
+{% endblock %}

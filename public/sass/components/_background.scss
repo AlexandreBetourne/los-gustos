@@ -1,0 +1,21 @@
+.background {
+  &__is-white {
+    background-color: map-get($colors, white) !important;
+  }
+
+  &__is-black {
+    background-color: map-get($colors, black) !important;
+  }
+
+  &__is-red {
+    background-color: map-get($colors, red) !important;
+  }
+
+  &__is-yellow {
+    background-color: map-get($colors, yellow) !important;
+  }
+
+  &__is-green {
+    background-color: map-get($colors, green) !important;
+  }
+}

@@ -1,0 +1,203 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+}
+
+#products_items {
+  width: 810px;
+  @media screen and (max-width: $break-large) {
+    width: 540px;
+  }
+  @media screen and (max-width: $break-medium) {
+    width: 270px;
+  }
+
+  .products_item {
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .content {
+        transform: translateX(-50%) translateY(-50%) scale(1.1);
+      }
+    }
+
+    .content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+      transition: 0.3s ease-in-out;
+    }
+
+    .picto {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    &:first-child {
+      .picto {
+        background: url("../img/picto/white/tacos_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(2) {
+      .picto {
+        background: url("../img/picto/white/burrito_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(3) {
+      .picto {
+        background: url("../img/picto/white/quesadillas_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(4) {
+      .picto {
+        background: url("../img/picto/white/nachos_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(5) {
+      .picto {
+        background: url("../img/picto/white/veggie_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &:last-child {
+      .picto {
+        background: url("../img/picto/white/drinks_picto.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+#drop-area {
+  background: map-get($colors, green);
+  top: 82px;
+
+  &.drop-area {
+    @media screen and (max-width: 50em) {
+      font-size: inherit;
+    }
+  }
+
+  .drop-area__item {
+    background: rgba(255,255,255,0.3);
+    margin: 0 0 1em 2em;
+    width: 200px;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+
+    & > div {
+      &:last-child {
+        display: none;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: space-between;
+
+        & > * {
+          display: block;
+          color: white;
+        }
+
+        button {
+          border: none;
+          cursor: pointer;
+          background: map-get($colors, yellow);
+          width: 30%;
+          border-radius: 5px;
+          font-family: inherit;
+          font-size: 20px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .img {
+      height: 150px;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    .desc {
+      padding: 5px;
+      text-align: left;
+      font-family: Futura;
+      display: none;
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 13px;
+        color: rgba(0,0,0,0.8);
+      }
+    }
+
+    &.filled {
+      height: auto;
+      background: transparent;
+      margin-bottom: 25px;
+
+      & > div {
+        &:first-child {
+          background: white;
+          box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          border-radius: 5px;
+        }
+
+        &:last-child {
+          display: flex;
+        }
+      }
+
+      .desc {
+        display: block;
+      }
+    }
+  }
+
+  .cart {
+    a {
+      width: 200px;
+      margin-left: 2em;
+    }
+  }
+}
+
+.drop-overlay {
+  top: 82px !important;
+  z-index: 10;
+}
+
+#items_container {
+  margin-top: 10px;
+}

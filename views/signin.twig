@@ -1,0 +1,23 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Connexion | Los Gustos' %}
+
+
+{% block content %}
+<main id="log" class="login">
+  <section class="flex">
+    <div class="">
+      <div class="">
+        <h1 class="upper has-text-centered is-size-3 bold">connectez vous</h1>
+        <form class="mg-t2 mauto-w" method="post">
+          <input type="email" name="email" placeholder="Adresse Mail" class="full-w">
+          <input type="password" name="password" placeholder="Mot de Passe" class="mg-t1 full-w">
+          <input type="submit" name="" value="envoyer" class="mainbtn upper mg-t1 full-w bold is-size-6">
+        </form>
+        <a href="/signup" class="has-text-centered text__is-black block">Pas encore de compte ? Inscrivez vous</a>
+      </div>
+    </div>
+    <div class="bg"></div>
+  </section>
+</main>
+{% endblock %}

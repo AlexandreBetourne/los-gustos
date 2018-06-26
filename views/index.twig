@@ -1,0 +1,99 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Los Gustos | Accueil' %}
+
+{% block content %}
+  <main>
+    <section id="swiper" class="pos-rel">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pos-rel">
+            <div class="pos-abs text">
+              <span class="block upper text__is-yellow bold">découvrez nos</span>
+              <span class="block is-rider text__is-green">buRRitos</span>
+              <a class="button mainbtn upper background__is-red text__is-white mg-t1 full-w bbox is-size-3 bold" href="results?food=burritos">commander</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pos-abs text">
+              <p class="upper text__is-green bold"><span class="block">rejoignez nous</span><br>pour profiter d'offres exclusives</p>
+              <a class="button mainbtn upper background__is-red text__is-white mg-t1 full-w bbox is-size-3 bold" href="/signup">inscrivez-vous</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next is-size-3"><i class="fas fa-angle-right"></i></div>
+        <div class="swiper-button-prev is-size-3"><i class="fas fa-angle-left"></i></div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <h2 class="is-rider has-text-centered is-size-1 text__is-black">nOS pRoduits</h2>
+        <div id="products_items" class="over_hide mauto-w mg-t2">
+          <a href="results?food=tacos" class="products_item background__is-yellow">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">tacos</h3>
+              </div>
+          </a>
+          <a href="results?food=burritos" class="products_item background__is-red">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">burritos</h3>
+              </div>
+          </a>
+          <a href="results?food=quesadillas" class="products_item background__is-green">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">quesadillas</h3>
+              </div>
+          </a>
+          <a href="results?food=nachos" class="products_item background__is-red">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">nachos</h3>
+              </div>
+          </a>
+          <a href="results?food=veggie" class="products_item background__is-green">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">veggie</h3>
+              </div>
+          </a>
+          <a href="results?food=drinks" class="products_item background__is-yellow">
+              <div class="content">
+                <div class="picto"></div>
+                <h3 class="upper bold is-size-4 text__is-white has-text-centered mg-t2">boissons</h3>
+              </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pub" class="over_hide">
+      <div class="text">
+        <h2 class="is-rider">los gustos ?</h2>
+        <p class="">Los Gustos est un site de commande en ligne de nourriture mexicaine réalisé avec des produits frais.<br/><br/>
+          On vous livre chez vous ou à votre bureau gratuitement en moins de 45min. </p>
+      </div>
+    </section>
+
+    <section class="section" id="whos"></section>
+  </main>
+
+
+  <script src="static/js/vendors/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      speed : 600,
+      // autoplay: {
+      //   delay: 6000,
+      // },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+{% endblock %}

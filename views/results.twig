@@ -1,0 +1,54 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Produits | Los Gustos' %}
+{% set footerClass = 'hide' %}
+
+{% block content %}
+  <nav id="catalog-nav" class="full-w">
+    <ul class="flex space-between">
+      <a href="/results?food=tacos" class="border {% if 'tacos' in url %}active{% endif %}">
+        <li class="upper tacos">tacos</li>
+      </a>
+      <a href="/results?food=burritos" class="border {% if 'burritos' in url %}active{% endif %}">
+        <li class="upper burritos">burritos</li>
+      </a>
+      <a href="/results?food=quesadillas" class="border {% if 'quesadillas' in url %}active{% endif %}">
+        <li class="upper quesadillas">quesadillas</li>
+      </a>
+      <a href="/results?food=nachos" class="border {% if 'nachos' in url %}active{% endif %}">
+        <li class="upper nachos">nachos</li>
+      </a>
+      <a href="/results?food=veggie" class="border {% if 'veggie' in url %}active{% endif %}">
+        <li class="upper veggie">veggie</li>
+      </a>
+      <a href="/results?food=drinks" class="{% if 'drinks' in url %}active{% endif %}">
+        <li class="upper drinks">boissons</li>
+      </a>
+    </ul>
+  </nav>
+
+  <main id="results">
+    <section class="section background__is-white" id="results_container">
+      <div class="container">
+        <div class="content">
+  				<div id="grid" class="grid clearfix">
+            {% for allResult in allResults %}
+              <div class="grid__item over_hide background__is-white">
+                <div class="img pos-rel over_hide">
+                  <img src="static/img/food/{{ food }}/{{ allResult.img }}.jpg" class="pos-abs">
+                </div>
+                <div class="desc">
+                  <h3 class="bold text__is-black">{{ allResult.name }}</h3>
+                  <p>{{ allResult.ingredient }}</p>
+                  <h4><span>{{ allResult.price }}</span> €</h4>
+                </div>
+              </div>
+            {% endfor %}
+  				</div>
+  			</div>
+      </div>
+    </section>
+  </main>
+
+
+{% endblock %}

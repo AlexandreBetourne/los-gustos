@@ -1,0 +1,174 @@
+#results {
+  margin-top: 0;
+}
+
+#grid {
+  max-width: none;
+  width: 887px;
+  min-height: 600px;
+  @media screen and (max-width: $break-large) {
+    width: 672px;
+  }
+  @media screen and (max-width: $break-medium) {
+    width: 457px;
+  }
+  @media screen and (max-width: $break-small) {
+    width: -moz-min-content;
+    width: -webkit-min-content;
+    width: min-content;
+  }
+
+  .grid__item {
+    width: 200px;
+    margin: inherit;
+    padding: 0;
+    margin: 5px;
+    height: 300px;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
+    transition: box-shadow height 0.3s ease;
+    position: relative;
+
+    &:hover {
+      box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .img {
+      height: 150px;
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    .desc {
+      padding: 5px;
+      text-align: left;
+      font-family: Futura;
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 13px;
+        color: rgba(0,0,0,0.6);
+      }
+
+      h4 {
+        font-size: 13px;
+        color: black;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+      }
+    }
+  }
+}
+
+#catalog-nav {
+  border-bottom: solid 1px map-get($colors, green);
+  margin-bottom: 0;
+  @media screen and (max-width: $break-large) {
+    overflow-x: scroll;
+
+    ul {
+      min-width: 1024px;
+    }
+  }
+
+  ul {
+    a {
+      width: calc(100%/6);
+      color: map-get($colors, black);
+      padding: 15px 0;
+      display: flex;
+      display: block;
+      transition: 0.1s ease;
+
+      &.active,
+      &:hover {
+        background: map-get($colors, green);
+        color: white;
+
+        li {
+          &.tacos {
+            background: url("../img/picto/white/tacos_picto.svg") no-repeat 10% center;
+            background-size: 23px;
+          }
+
+          &.burritos {
+            background: url("../img/picto/white/burrito_picto.svg") no-repeat 10% center;
+            background-size: 25px;
+          }
+
+          &.quesadillas {
+            background: url("../img/picto/white/quesadillas_picto.svg") no-repeat 5% center;
+            background-size: 28px;
+          }
+
+          &.nachos {
+            background: url("../img/picto/white/nachos_picto.svg") no-repeat 10% center;
+            background-size: 26px;
+          }
+
+          &.veggie {
+            background: url("../img/picto/white/veggie_picto.svg") no-repeat 10% center;
+            background-size: 23px;
+          }
+
+          &.drinks {
+            background: url("../img/picto/white/drinks_picto.svg") no-repeat 14% center;
+            background-size: 15px;
+          }
+        }
+      }
+
+      img {
+        width: 20px;
+      }
+
+      &.border {
+        border-right: solid 1px map-get($colors, green);
+      }
+    }
+
+    li {
+      padding-left: 40px;
+      width: max-content;
+      margin: 0 auto;
+
+      &.tacos {
+        background: url("../img/picto/green/tacos_picto.svg") no-repeat 10% center;
+        background-size: 23px;
+      }
+
+      &.burritos {
+        background: url("../img/picto/green/burrito_picto.svg") no-repeat 10% center;
+        background-size: 25px;
+      }
+
+      &.quesadillas {
+        background: url("../img/picto/green/quesadillas_picto.svg") no-repeat 5% center;
+        background-size: 28px;
+      }
+
+      &.nachos {
+        background: url("../img/picto/green/nachos_picto.svg") no-repeat 10% center;
+        background-size: 26px;
+      }
+
+      &.veggie {
+        background: url("../img/picto/green/veggie_picto.svg") no-repeat 10% center;
+        background-size: 23px;
+      }
+
+      &.drinks {
+        background: url("../img/picto/green/drinks_picto.svg") no-repeat 14% center;
+        background-size: 15px;
+      }
+    }
+  }
+}

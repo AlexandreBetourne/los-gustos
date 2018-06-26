@@ -1,0 +1,14 @@
+/* line 3, ../../sass/templates/log.scss */
+#log section > div {
+  width: 50%;
+  padding: 100px 0;
+}
+/* line 9, ../../sass/templates/log.scss */
+#log form {
+  max-width: 300px;
+}
+/* line 13, ../../sass/templates/log.scss */
+#log .bg {
+  background: url("../img/bg.jpg") no-repeat center;
+  background-size: cover;
+}

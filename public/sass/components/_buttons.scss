@@ -1,0 +1,14 @@
+.button {
+  border: none !important;
+  -webkit-appearance: none;
+}
+
+.mainbtn {
+  background: map-get($colors, red) !important;
+  color: map-get($colors, white) !important;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  -webkit-appearance: none;
+}

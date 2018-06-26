@@ -1,0 +1,148 @@
+#swiper {
+  .swiper-container {
+    height: 600px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background: none;
+  }
+
+  .swiper-slide {
+    &:first-of-type {
+      background: url("../img/burr.jpg") no-repeat center;
+      background-size: cover;
+
+      .text {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+        width: max-content;
+
+        span {
+          margin-bottom: 0;
+          text-shadow: 5px 5px black;
+          line-height: 120px;
+          @media screen and (max-width: $break-medium) {
+            line-height: 75px;
+          }
+
+          &:first-child {
+            font-size: 60px;
+            @media screen and (max-width: $break-medium) {
+              font-size: 35px;
+            }
+          }
+
+          &:nth-child(2) {
+            font-size: 166px;
+            @media screen and (max-width: $break-medium) {
+              font-size: 98px;
+            }
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      background: map-get($colors, yellow);
+      background-size: cover;
+
+      .text {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        z-index: 2;
+        width: max-content;
+
+        p {
+          font-size: 30px;
+          margin-bottom: 0;
+          line-height: 18px;
+          @media screen and (max-width: $break-medium) {
+            font-size: 16px;
+            line-height: 6px;
+
+            span {
+              font-size: 33px !important;
+            }
+          }
+
+          span {
+            font-size: 63px;
+          }
+        }
+
+        .button {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .button {
+      box-shadow: 5px 5px 0 rgba(0,0,0,1);
+
+      &:hover {
+        letter-spacing: 5px;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: map-get($colors, green);
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+
+    i {
+      font-size: 50px;
+    }
+  }
+}
+
+#pub {
+  height: 450px;
+  background: url("../img/tacos_add.jpg")no-repeat 40% center;
+  background-size: cover;
+  position: relative;
+  @media screen and (max-width: $break-medium) {
+    background: url("../img/tacos_add.jpg")no-repeat right center;
+  }
+
+  .text {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    width: 400px;
+    @media screen and (max-width: $break-medium) {
+      width: 300px;
+      left: 50%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 70px;
+      @media screen and (max-width: $break-medium) {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+#whos {
+  background: url("../img/picto_bg.png") no-repeat center;
+  background-size: cover;
+  height: 300px;
+
+  .text {
+    box-shadow: 5px 5px 14px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+}

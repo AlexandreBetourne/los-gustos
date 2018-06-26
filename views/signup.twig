@@ -1,0 +1,31 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Inscription | Los Gustos' %}
+
+{% block content %}
+<main id="log">
+  <section class="flex">
+    <div class="bg"></div>
+    <div class="">
+      <div class="">
+        <h1 class="upper has-text-centered is-size-3 bold">inscrivez vous</h1>
+        <form class="mg-t2 mauto-w" method="post">
+          <div class="half-inputs">
+            <input type="text" name="firstname" placeholder="Nom*" required>
+            <input type="text" name="lastname" placeholder="Prénom*" required>
+          </div>
+          <input type="email" name="email" placeholder="Adresse Mail*" class="full-w mg-t1" required>
+          <input type="password" name="password" placeholder="Mot de Passe*" class="mg-t1 full-w" required>
+          <input type="text" name="adress" placeholder="Adresse" class="mg-t1 full-w">
+          <div class="half-inputs">
+            <input type="text" name="city" placeholder="Ville" class="mg-t1 full-w">
+            <input type="text" name="post" placeholder="Code Postale" class="mg-t1 full-w">
+          </div>
+          <input type="submit" name="" value="envoyer" class="mainbtn upper mg-t1 full-w bold is-size-6">
+        </form>
+        <a href="/signin" class="has-text-centered text__is-black block">Déja membre ? Connectez vous !</a>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
