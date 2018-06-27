@@ -1,0 +1,8 @@
+/* line 2, ../../sass/templates/profile.scss */
+#profile hr {
+  background-color: black;
+}
+/* line 6, ../../sass/templates/profile.scss */
+#profile span {
+  margin: 5px 0;
+}

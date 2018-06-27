@@ -8,11 +8,24 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	database.sendQuery('INSERT INTO user (email) VALUES ("' + req.body.email + '")', function(err, results) {
+	database.sendQuery(`SELECT * from user WHERE email='${req.body.email}'`, function(err, log) {
 		if (err) {
 			console.log(err)
 		} else {
-			res.json(results)
+			if (req.body.password != log[0].password) {
+				res.render('signin', {
+					error: 'Mot de passe incorrect'
+				});
+			} else {
+				res.redirect(url.format({
+					pathname: "/profile",
+					query: {
+						"a": 1,
+						"b": 2,
+						"valid": "your string here"
+					}
+				}));
+			}
 		}
 	})
 

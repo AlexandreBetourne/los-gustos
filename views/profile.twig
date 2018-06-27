@@ -1,0 +1,26 @@
+{% extends '_layout.twig' %}
+
+{% set title = 'Profile | Los Gustos' %}
+
+
+{% block content %}
+<main id="profile" class="login">
+  <section class="section">
+    <div class="container">
+      <h1 class="upper is-size-2 has-text-centered bold mg-b7">profil</h1>
+      <hr>
+      <div class="">
+        <h2 class="upper is-size-4 bold">infos</h2>
+        <span class="block">{{ firstName }} {{ lastName }}</span>
+        <span class="block">{{ email }}</span>
+      </div>
+      <hr>
+      <div class="">
+        <h2 class="upper is-size-4 bold">infos</h2>
+        <span class="block">{{ adress }}</span>
+        <span class="block">{{ postal }}, {{ city }}</span>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

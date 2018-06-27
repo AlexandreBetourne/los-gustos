@@ -6,7 +6,7 @@ var database = require('../services/database.js');
 router.get('/', function(req, res, next) {
 	var food = req.param('food');
 	var allResults = [];
-	database.sendQuery("SELECT * from " + food + "", function(err, results) {
+	database.sendQuery(`SELECT * from ${food}`, function(err, results) {
 		if (err) {
 			console.log(err)
 		} else {
@@ -25,7 +25,6 @@ router.get('/', function(req, res, next) {
 			});
 		}
 	})
-
 });
 
 

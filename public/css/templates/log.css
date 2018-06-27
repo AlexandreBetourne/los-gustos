@@ -1,7 +1,7 @@
 /* line 3, ../../sass/templates/log.scss */
 #log section > div {
   width: 50%;
-  padding: 100px 0;
+  padding: 30vh 0;
 }
 /* line 9, ../../sass/templates/log.scss */
 #log form {
@@ -11,4 +11,12 @@
 #log .bg {
   background: url("../img/bg.jpg") no-repeat center;
   background-size: cover;
+}
+
+/* line 19, ../../sass/templates/log.scss */
+#notsamepass {
+  display: block;
+  color: red;
+  border-radius: 5px;
+  margin-top: 10px;
 }

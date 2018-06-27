@@ -1,10 +1,10 @@
 var mysql = require('mysql')
 
 var co = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: ''
+	host: 'mysql-betourne.alwaysdata.net',
+	user: 'betourne',
+	password: 'moregame',
+	database: 'betourne_los_gustos'
 });
 
 co.connect(function(err) {

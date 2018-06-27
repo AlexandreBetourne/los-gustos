@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS losgustos;
 CREATE DATABASE losgustos;
 USE losgustos;
 
+DROP Table IF EXISTS user;
 CREATE TABLE user (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`lastname` VARCHAR(128),
@@ -13,6 +14,7 @@ CREATE TABLE user (
 	`postal` VARCHAR(128)
 );
 
+DROP Table IF EXISTS tacos;
 CREATE TABLE tacos (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
@@ -21,6 +23,7 @@ CREATE TABLE tacos (
 	`ingredient` VARCHAR(128)
 );
 
+DROP Table IF EXISTS burritos;
 CREATE TABLE burritos (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
@@ -29,6 +32,7 @@ CREATE TABLE burritos (
 	`ingredient` VARCHAR(128)
 );
 
+DROP Table IF EXISTS quesadillas;
 CREATE TABLE quesadillas (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
@@ -37,6 +41,7 @@ CREATE TABLE quesadillas (
 	`ingredient` VARCHAR(128)
 );
 
+DROP Table IF EXISTS nachos;
 CREATE TABLE nachos (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
@@ -45,6 +50,7 @@ CREATE TABLE nachos (
 	`ingredient` VARCHAR(128)
 );
 
+DROP Table IF EXISTS veggie;
 CREATE TABLE veggie (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
@@ -53,6 +59,7 @@ CREATE TABLE veggie (
 	`ingredient` VARCHAR(128)
 );
 
+DROP Table IF EXISTS drinks;
 CREATE TABLE drinks (
 	`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	`name` VARCHAR(128),
