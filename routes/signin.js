@@ -17,14 +17,17 @@ router.post('/', function(req, res, next) {
 					error: 'Mot de passe incorrect'
 				});
 			} else {
-				res.redirect(url.format({
-					pathname: "/profile",
-					query: {
-						"a": 1,
-						"b": 2,
-						"valid": "your string here"
-					}
-				}));
+				var session = req.session
+				session.user = {
+					lastName: log[0].lastname,
+					firstName: log[0].firstname,
+					email: log[0].email,
+					password: log[0].password,
+					adress: log[0].adress,
+					city: log[0].city,
+					post: log[0].postal
+				}
+				res.redirect('/profile');
 			}
 		}
 	})

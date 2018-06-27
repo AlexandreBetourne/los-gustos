@@ -12,7 +12,17 @@ router.post('/', function(req, res, next) {
 		if (err) {
 			console.log(err)
 		} else {
-			res.redirect('/');
+			var session = req.session
+			session.user = {
+				lastName: req.body.lastname,
+				firstName: req.body.firstname,
+				email: req.body.email,
+				password: req.body.password,
+				adress: req.body.adress,
+				city: req.body.city,
+				post: req.body.post
+			}
+			res.redirect('/profile');
 		}
 	})
 });
