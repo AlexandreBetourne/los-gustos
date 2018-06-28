@@ -3,20 +3,47 @@ var router = express.Router();
 
 
 router.get('/about', function(req, res, next) {
-	res.render('about');
+	if (req.session.user) {
+		res.render('about', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('about');
+	}
 });
 
 router.get('/contact', function(req, res, next) {
-	res.render('contact');
+	if (req.session.user) {
+		res.render('contact', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('contact');
+	}
 });
 
 router.get('/legal', function(req, res, next) {
-	res.render('legal');
+	if (req.session.user) {
+		res.render('legal', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('legal');
+	}
+});
+
+router.get('/createaccount', function(req, res, next) {
+	if (req.session.user) {
+		res.render('createaccount', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('createaccount');
+	}
 });
 
 router.get('/logout', function(req, res, next) {
-	var session = req.session
-	session.user = {
+	req.session.user = {
 		lastName: '',
 		firstName: '',
 		email: '',

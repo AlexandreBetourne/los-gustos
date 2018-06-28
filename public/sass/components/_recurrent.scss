@@ -201,3 +201,24 @@ a {
 #items_container {
   margin-top: 10px;
 }
+
+#createaccount {
+  section {
+    padding: 200px 1.5rem;
+  }
+
+  .buttons {
+    width: 310px;
+    margin: 0 auto;
+
+    .button {
+      width: 150px;
+    }
+
+    .button:last-child {
+      border: solid 2px map-get($colors, red) !important;
+      color: map-get($colors, red) !important;
+      background: white !important;
+    }
+  }
+}

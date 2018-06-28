@@ -34,10 +34,16 @@
                 <i class="fas fa-book-open"></i>
                 <span>nos produits</span>
               </a>
+              {% if user %}
+              <a href="profile" class="text__is-white upper bold">
+                <i class="fas fa-user mg-r1"></i>
+              </a>
+              {% else %}
               <a href="signin" class="text__is-white upper bold">
                 <i class="fas fa-user mg-r1"></i>
                 <span>connexion</span>
               </a>
+              {% endif %}
               <a href="#" id="cart_icon">
                 <span class="text__is-white"><i class="fas fa-shopping-cart"></i></span>
               </a>
@@ -50,7 +56,12 @@
         <div id="drop-area" class="drop-area">
       		<div>
             <div class="cart">
-              <a href="/cart" class="button background__is-red text__is-white bold upper mauto-w mg-t2">aller au panier</a>
+              {% if user %}
+                <a href="/cart" class="button background__is-red text__is-white bold upper mauto-w mg-t2">aller au panier</a>
+              {% else %}
+                <a href="/createaccount" class="button background__is-red text__is-white bold upper mauto-w mg-t2">aller au panier</a>
+              {% endif %}
+
             </div>
             <div id="items_container">
             {% for i in 0..20 %}

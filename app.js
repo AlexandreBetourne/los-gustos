@@ -2,10 +2,10 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
 var Twig = require('twig');
 var mysql = require('mysql')
 var session = require('express-session')
+var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var resultsRouter = require('./routes/results');
@@ -25,7 +25,6 @@ app.set('trust proxy', 1)
 app.use(session({
 	secret: 'keyboard cat'
 }))
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

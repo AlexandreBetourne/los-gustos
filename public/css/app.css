@@ -1129,6 +1129,26 @@ a {
   margin-top: 10px;
 }
 
+/* line 206, ../sass/components/_recurrent.scss */
+#createaccount section {
+  padding: 200px 1.5rem;
+}
+/* line 210, ../sass/components/_recurrent.scss */
+#createaccount .buttons {
+  width: 310px;
+  margin: 0 auto;
+}
+/* line 214, ../sass/components/_recurrent.scss */
+#createaccount .buttons .button {
+  width: 150px;
+}
+/* line 218, ../sass/components/_recurrent.scss */
+#createaccount .buttons .button:last-child {
+  border: solid 2px #E00303 !important;
+  color: #E00303 !important;
+  background: white !important;
+}
+
 @font-face {
   font-family: HellsRider;
   src: url("../fonts/HellsRider.ttf");
@@ -1178,28 +1198,30 @@ header {
   z-index: 1000000;
 }
 /* line 11, ../sass/templates/layout.scss */
-header a[href="signin"] {
+header a[href="signin"],
+header a[href="profile"] {
   border-right: solid 1px white;
   border-left: solid 1px white;
 }
 @media screen and (max-width: 769px) {
-  /* line 15, ../sass/templates/layout.scss */
-  header a[href="signin"] span {
+  /* line 16, ../sass/templates/layout.scss */
+  header a[href="signin"] span,
+  header a[href="profile"] span {
     display: none;
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 23, ../sass/templates/layout.scss */
+  /* line 24, ../sass/templates/layout.scss */
   header a[href="/#catalog"] span {
     display: none;
   }
 }
-/* line 30, ../sass/templates/layout.scss */
+/* line 31, ../sass/templates/layout.scss */
 header nav a {
   padding: 0 20px;
 }
 @media screen and (max-width: 769px) {
-  /* line 29, ../sass/templates/layout.scss */
+  /* line 30, ../sass/templates/layout.scss */
   header nav {
     justify-content: space-between;
     position: fixed;
@@ -1209,7 +1231,7 @@ header nav a {
     width: 100vw;
     background: #E00303;
   }
-  /* line 42, ../sass/templates/layout.scss */
+  /* line 43, ../sass/templates/layout.scss */
   header nav a {
     padding: 15px 0;
     width: calc(100%/3);
@@ -1218,34 +1240,34 @@ header nav a {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 51, ../sass/templates/layout.scss */
+  /* line 52, ../sass/templates/layout.scss */
   header > div {
     display: block !important;
   }
-  /* line 56, ../sass/templates/layout.scss */
+  /* line 57, ../sass/templates/layout.scss */
   header > div > div:first-child a {
     margin: 0 auto;
   }
 }
 
-/* line 65, ../sass/templates/layout.scss */
+/* line 66, ../sass/templates/layout.scss */
 #logo {
   width: 100px;
 }
 
 @media screen and (max-width: 769px) {
-  /* line 69, ../sass/templates/layout.scss */
+  /* line 70, ../sass/templates/layout.scss */
   main {
     margin-bottom: 40px;
   }
 }
 
-/* line 76, ../sass/templates/layout.scss */
+/* line 77, ../sass/templates/layout.scss */
 .border__right {
   border-right: solid 1px white;
   height: 40px;
 }
-/* line 81, ../sass/templates/layout.scss */
+/* line 82, ../sass/templates/layout.scss */
 .border__bottom {
   border-bottom: solid 1px white;
   width: 40px;

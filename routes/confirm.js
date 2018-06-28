@@ -3,7 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('confirm');
+	if (req.session.user) {
+		res.render('confirm', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('confirm');
+	}
 });
 
 module.exports = router;

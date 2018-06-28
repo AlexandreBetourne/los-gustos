@@ -7,7 +7,13 @@ var stripe = require("stripe")(
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('pay');
+	if (req.session.user) {
+		res.render('pay', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('pay');
+	}
 
 	const token = req.body.stripeToken;
 	const charge = stripe.charges.create({

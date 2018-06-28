@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 	user = req.session.user
 	res.render('profile', {
+		user: true,
 		firstName: user.firstName,
 		lastName: user.lastName,
 		email: user.email,

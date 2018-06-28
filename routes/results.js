@@ -18,11 +18,20 @@ router.get('/', function(req, res, next) {
 					ingredient: results[i].ingredient
 				})
 			}
-			res.render('results', {
-				allResults: allResults,
-				food: food,
-				url: req.originalUrl
-			});
+			if (req.session.user) {
+				res.render('results', {
+					allResults: allResults,
+					food: food,
+					url: req.originalUrl,
+					user: req.session.user.connected
+				});
+			} else {
+				res.render('results', {
+					allResults: allResults,
+					food: food,
+					url: req.originalUrl
+				});
+			}
 		}
 	})
 });

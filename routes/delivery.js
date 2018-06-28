@@ -3,7 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('delivery');
+	user = req.session.user
+	res.render('delivery', {
+		user: user.connected,
+		firstName: user.firstName,
+		lastName: user.lastName,
+		email: user.email,
+		adress: user.adress,
+		postal: user.post,
+		city: user.city
+	});
 });
 
 module.exports = router;

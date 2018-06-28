@@ -4,7 +4,13 @@ var database = require('../services/database.js');
 
 
 router.get('/', function(req, res, next) {
-	res.render('signin');
+	if (req.session.user) {
+		res.render('signin', {
+			user: req.session.user.connected
+		});
+	} else {
+		res.render('signin');
+	}
 });
 
 router.post('/', function(req, res, next) {
@@ -19,6 +25,7 @@ router.post('/', function(req, res, next) {
 			} else {
 				var session = req.session
 				session.user = {
+					connected: true,
 					lastName: log[0].lastname,
 					firstName: log[0].firstname,
 					email: log[0].email,
@@ -27,7 +34,7 @@ router.post('/', function(req, res, next) {
 					city: log[0].city,
 					post: log[0].postal
 				}
-				res.redirect('/profile');
+				res.redirect('/');
 			}
 		}
 	})

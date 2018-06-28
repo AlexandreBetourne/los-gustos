@@ -11,7 +11,8 @@ CREATE TABLE user (
 	`password` VARCHAR(128),
 	`adress` VARCHAR(128),
 	`city` VARCHAR(128),
-	`postal` VARCHAR(128)
+	`postal` VARCHAR(128),
+	`phone` VARCHAR(15)
 );
 
 DROP Table IF EXISTS tacos;
