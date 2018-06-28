@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 		email: user.email,
 		adress: user.adress,
 		postal: user.post,
-		city: user.city
+		city: user.city,
+		phone: user.phone
 	});
 });
 

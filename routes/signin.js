@@ -32,7 +32,8 @@ router.post('/', function(req, res, next) {
 					password: log[0].password,
 					adress: log[0].adress,
 					city: log[0].city,
-					post: log[0].postal
+					post: log[0].postal,
+					phone: log[0].phone
 				}
 				res.redirect('/');
 			}

@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	database.sendQuery('INSERT INTO user (lastname, firstname, email, password, adress, city, postal) VALUES ("' + req.body.lastname + '", "' + req.body.firstname + '", "' + req.body.email + '", "' + req.body.password + '", "' + req.body.adress + '", "' + req.body.city + '","' + req.body.post + '")', function(err, results) {
+	database.sendQuery(`INSERT INTO user (lastname, firstname, email, password, adress, city, postal, phone) VALUES (" ${req.body.lastname} ", "${req.body.firstname}", "${req.body.email}", "${req.body.password}", "${req.body.adress}", "${req.body.city}","${req.body.post}","${req.body.phone}")`, function(err, results) {
 		if (err) {
 			console.log(err)
 		} else {
@@ -27,7 +27,8 @@ router.post('/', function(req, res, next) {
 				password: req.body.password,
 				adress: req.body.adress,
 				city: req.body.city,
-				post: req.body.post
+				post: req.body.post,
+				phone: req.body.phone
 			}
 			res.redirect('/');
 		}
