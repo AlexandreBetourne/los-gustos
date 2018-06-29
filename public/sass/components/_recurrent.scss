@@ -96,6 +96,10 @@ a {
     }
   }
 
+  &.scrolled {
+    top: 0;
+  }
+
   .drop-area__item {
     background: rgba(255,255,255,0.3);
     margin: 0 0 1em 2em;
@@ -196,6 +200,10 @@ a {
 .drop-overlay {
   top: 82px !important;
   z-index: 10;
+
+  &.scrolled {
+    top: 0 !important;
+  }
 }
 
 #items_container {

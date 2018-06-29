@@ -2,6 +2,9 @@ body {
   color: map-get($colors, black);
   font-weight: bold;
   line-height: inherit;
+  @media screen and (max-width: $break-medium) {
+    padding-bottom: 60px !important;
+  }
 }
 
 header {
@@ -65,12 +68,6 @@ header {
 
 #logo {
   width: 100px;
-}
-
-main {
-  @media screen and (max-width: $break-medium) {
-    margin-bottom: 40px;
-  }
 }
 
 .border {

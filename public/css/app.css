@@ -1028,29 +1028,33 @@ a {
   }
 }
 /* line 99, ../sass/components/_recurrent.scss */
+#drop-area.scrolled {
+  top: 0;
+}
+/* line 103, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item {
   background: rgba(255, 255, 255, 0.3);
   margin: 0 0 1em 2em;
   width: 200px;
   padding: 0;
 }
-/* line 105, ../sass/components/_recurrent.scss */
+/* line 109, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item::after {
   display: none;
 }
-/* line 110, ../sass/components/_recurrent.scss */
+/* line 114, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item > div:last-child {
   display: none;
   margin-top: 10px;
   align-items: center;
   justify-content: space-between;
 }
-/* line 116, ../sass/components/_recurrent.scss */
+/* line 120, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item > div:last-child > * {
   display: block;
   color: white;
 }
-/* line 121, ../sass/components/_recurrent.scss */
+/* line 125, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item > div:last-child button {
   border: none;
   cursor: pointer;
@@ -1060,89 +1064,93 @@ a {
   font-family: inherit;
   font-size: 20px;
 }
-/* line 130, ../sass/components/_recurrent.scss */
+/* line 134, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item > div:last-child button:focus {
   outline: none;
 }
-/* line 137, ../sass/components/_recurrent.scss */
+/* line 141, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item .img {
   height: 150px;
 }
-/* line 140, ../sass/components/_recurrent.scss */
+/* line 144, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item .img img {
   top: 0;
   left: 0;
   width: 100%;
 }
-/* line 147, ../sass/components/_recurrent.scss */
+/* line 151, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item .desc {
   padding: 5px;
   text-align: left;
   font-family: Futura;
   display: none;
 }
-/* line 153, ../sass/components/_recurrent.scss */
+/* line 157, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item .desc h3 {
   font-size: 16px;
   margin-bottom: 5px;
 }
-/* line 158, ../sass/components/_recurrent.scss */
+/* line 162, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item .desc p {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.8);
 }
-/* line 164, ../sass/components/_recurrent.scss */
+/* line 168, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item.filled {
   height: auto;
   background: transparent;
   margin-bottom: 25px;
 }
-/* line 170, ../sass/components/_recurrent.scss */
+/* line 174, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item.filled > div:first-child {
   background: white;
   box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 5px;
 }
-/* line 177, ../sass/components/_recurrent.scss */
+/* line 181, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item.filled > div:last-child {
   display: flex;
 }
-/* line 182, ../sass/components/_recurrent.scss */
+/* line 186, ../sass/components/_recurrent.scss */
 #drop-area .drop-area__item.filled .desc {
   display: block;
 }
-/* line 189, ../sass/components/_recurrent.scss */
+/* line 193, ../sass/components/_recurrent.scss */
 #drop-area .cart a {
   width: 200px;
   margin-left: 2em;
 }
 
-/* line 196, ../sass/components/_recurrent.scss */
+/* line 200, ../sass/components/_recurrent.scss */
 .drop-overlay {
   top: 82px !important;
   z-index: 10;
 }
+/* line 204, ../sass/components/_recurrent.scss */
+.drop-overlay.scrolled {
+  top: 0 !important;
+}
 
-/* line 201, ../sass/components/_recurrent.scss */
+/* line 209, ../sass/components/_recurrent.scss */
 #items_container {
   margin-top: 10px;
 }
 
-/* line 206, ../sass/components/_recurrent.scss */
+/* line 214, ../sass/components/_recurrent.scss */
 #createaccount section {
   padding: 200px 1.5rem;
 }
-/* line 210, ../sass/components/_recurrent.scss */
+/* line 218, ../sass/components/_recurrent.scss */
 #createaccount .buttons {
   width: 310px;
   margin: 0 auto;
 }
-/* line 214, ../sass/components/_recurrent.scss */
+/* line 222, ../sass/components/_recurrent.scss */
 #createaccount .buttons .button {
   width: 150px;
 }
-/* line 218, ../sass/components/_recurrent.scss */
+/* line 226, ../sass/components/_recurrent.scss */
 #createaccount .buttons .button:last-child {
   border: solid 2px #E00303 !important;
   color: #E00303 !important;
@@ -1191,37 +1199,43 @@ body {
   font-weight: bold;
   line-height: inherit;
 }
+@media screen and (max-width: 769px) {
+  /* line 1, ../sass/templates/layout.scss */
+  body {
+    padding-bottom: 60px !important;
+  }
+}
 
-/* line 7, ../sass/templates/layout.scss */
+/* line 10, ../sass/templates/layout.scss */
 header {
   top: 0;
   z-index: 1000000;
 }
-/* line 11, ../sass/templates/layout.scss */
+/* line 14, ../sass/templates/layout.scss */
 header a[href="signin"],
 header a[href="profile"] {
   border-right: solid 1px white;
   border-left: solid 1px white;
 }
 @media screen and (max-width: 769px) {
-  /* line 16, ../sass/templates/layout.scss */
+  /* line 19, ../sass/templates/layout.scss */
   header a[href="signin"] span,
   header a[href="profile"] span {
     display: none;
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 24, ../sass/templates/layout.scss */
+  /* line 27, ../sass/templates/layout.scss */
   header a[href="/#catalog"] span {
     display: none;
   }
 }
-/* line 31, ../sass/templates/layout.scss */
+/* line 34, ../sass/templates/layout.scss */
 header nav a {
   padding: 0 20px;
 }
 @media screen and (max-width: 769px) {
-  /* line 30, ../sass/templates/layout.scss */
+  /* line 33, ../sass/templates/layout.scss */
   header nav {
     justify-content: space-between;
     position: fixed;
@@ -1231,7 +1245,7 @@ header nav a {
     width: 100vw;
     background: #E00303;
   }
-  /* line 43, ../sass/templates/layout.scss */
+  /* line 46, ../sass/templates/layout.scss */
   header nav a {
     padding: 15px 0;
     width: calc(100%/3);
@@ -1240,34 +1254,27 @@ header nav a {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 52, ../sass/templates/layout.scss */
+  /* line 55, ../sass/templates/layout.scss */
   header > div {
     display: block !important;
   }
-  /* line 57, ../sass/templates/layout.scss */
+  /* line 60, ../sass/templates/layout.scss */
   header > div > div:first-child a {
     margin: 0 auto;
   }
 }
 
-/* line 66, ../sass/templates/layout.scss */
+/* line 69, ../sass/templates/layout.scss */
 #logo {
   width: 100px;
 }
 
-@media screen and (max-width: 769px) {
-  /* line 70, ../sass/templates/layout.scss */
-  main {
-    margin-bottom: 40px;
-  }
-}
-
-/* line 77, ../sass/templates/layout.scss */
+/* line 74, ../sass/templates/layout.scss */
 .border__right {
   border-right: solid 1px white;
   height: 40px;
 }
-/* line 82, ../sass/templates/layout.scss */
+/* line 79, ../sass/templates/layout.scss */
 .border__bottom {
   border-bottom: solid 1px white;
   width: 40px;
@@ -1632,22 +1639,39 @@ header nav a {
   background-size: 15px;
 }
 
-/* line 3, ../sass/templates/log.scss */
+@media screen and (max-width: 769px) {
+  /* line 2, ../sass/templates/log.scss */
+  #log section {
+    display: block;
+  }
+}
+/* line 7, ../sass/templates/log.scss */
 #log section > div {
   width: 50%;
   padding: 30vh 0;
 }
-/* line 9, ../sass/templates/log.scss */
+@media screen and (max-width: 769px) {
+  /* line 7, ../sass/templates/log.scss */
+  #log section > div {
+    width: 100%;
+    padding: 10vh 0;
+  }
+  /* line 14, ../sass/templates/log.scss */
+  #log section > div.bg {
+    display: none;
+  }
+}
+/* line 21, ../sass/templates/log.scss */
 #log form {
   max-width: 300px;
 }
-/* line 13, ../sass/templates/log.scss */
+/* line 25, ../sass/templates/log.scss */
 #log .bg {
   background: url("../img/bg.jpg") no-repeat center;
   background-size: cover;
 }
 
-/* line 19, ../sass/templates/log.scss */
+/* line 31, ../sass/templates/log.scss */
 #notsamepass {
   display: block;
   color: red;
@@ -1726,4 +1750,31 @@ header nav a {
 /* line 6, ../sass/templates/profile.scss */
 #profile span {
   margin: 5px 0;
+}
+
+/* line 1, ../sass/templates/pay.scss */
+.StripeElement {
+  background-color: white;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+/* line 12, ../sass/templates/pay.scss */
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+/* line 16, ../sass/templates/pay.scss */
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+/* line 20, ../sass/templates/pay.scss */
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
 }

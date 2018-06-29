@@ -34,3 +34,13 @@ function less_amount(event) {
 	}
 	quantityCookies(document.querySelectorAll('.filled'))
 }
+
+function scroll_drop_area(event) {
+	if (window.scrollY != 0) {
+		document.getElementById('drop-area').classList.add("scrolled");
+		document.getElementById('drop-overlay').classList.add("scrolled");
+	} else {
+		document.getElementById('drop-area').classList.remove("scrolled");
+		document.getElementById('drop-overlay').classList.remove("scrolled");
+	}
+}

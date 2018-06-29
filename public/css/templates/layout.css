@@ -6,9 +6,9 @@ Error: Undefined variable: "$colors".
 2:   color: map-get($colors, black);
 3:   font-weight: bold;
 4:   line-height: inherit;
-5: }
-6: 
-7: header {
+5:   @media screen and (max-width: $break-medium) {
+6:     padding-bottom: 60px !important;
+7:   }
 
 Backtrace:
 /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss:2
@@ -58,19 +58,15 @@ Backtrace:
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Library/Ruby/Gems/2.3.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/local/bin/compass:22:in `load'
-/usr/local/bin/compass:22:in `<main>'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$colors\".\A         on line 2 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss\A \A 1: body {\A 2:   color: map-get($colors, black);\A 3:   font-weight: bold;\A 4:   line-height: inherit;\A 5: }\A 6: \A 7: header {"; }
+  content: "Error: Undefined variable: \"$colors\".\A         on line 2 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss\A \A 1: body {\A 2:   color: map-get($colors, black);\A 3:   font-weight: bold;\A 4:   line-height: inherit;\A 5:   @media screen and (max-width: $break-medium) {\A 6:     padding-bottom: 60px !important;\A 7:   }"; }

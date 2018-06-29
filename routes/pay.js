@@ -5,7 +5,6 @@ var stripe = require("stripe")(
 	"sk_test_8wvNaHZbOntAvBJrCt5QxhWN"
 );
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
 	if (req.session.user) {
 		res.render('pay', {
@@ -14,15 +13,19 @@ router.get('/', function(req, res, next) {
 	} else {
 		res.render('pay');
 	}
+});
 
+
+router.post('/', function(req, res, next) {
 	const token = req.body.stripeToken;
-	const charge = stripe.charges.create({
-		amount: 999,
-		currency: 'eur',
-		source: 'token',
-		receipt_email: 'alexandre.betourne.pro@gmail.com',
-	});
-	console.log(charge);
+	// const charge = stripe.charges.create({
+	// 	amount: 999,
+	// 	currency: 'eur',
+	// 	source: 'token',
+	// 	receipt_email: 'alexandre.betourne.pro@gmail.com',
+	// });
+	// res.json(req.body)
+	res.redirect('/confirm');
 });
 
 module.exports = router;

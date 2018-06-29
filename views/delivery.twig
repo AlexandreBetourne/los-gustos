@@ -10,30 +10,30 @@
       <h1 class="upper bold is-size-3 mg-b3 has-text-centered">adresse de livraison</h1>
       <form class="mauto-w" action="/pay" id="delivery-form">
         <div class="half-inputs">
-          <input type="text" name="" value="{{lastName}}" placeholder="Nom">
-          <input type="text" name="" value="{{firstName}}" placeholder="Prénom">
+          <input type="text" name="" value="{{lastName}}" placeholder="Nom" required>
+          <input type="text" name="" value="{{firstName}}" placeholder="Prénom" required>
         </div>
         {% if adress %}
-          <input type="text" name="" value="{{adress}}" placeholder="Adresse" class="full-w mg-t2">
+          <input type="text" name="" value="{{adress}}" placeholder="Adresse" class="full-w mg-t2" required>
         {% else %}
-          <input type="text" name="" placeholder="Adresse" class="full-w mg-t2">
+          <input type="text" name="" placeholder="Adresse" class="full-w mg-t2" required>
         {% endif %}
         <div class="half-inputs">
           {% if city %}
-            <input type="text" name="" value="{{city}}" placeholder="Ville" class="mg-t2">
+            <input type="text" name="" value="{{city}}" placeholder="Ville" class="mg-t2" required>
           {% else %}
-            <input type="text" name="" placeholder="Ville" class="mg-t2">
+            <input type="text" name="" placeholder="Ville" class="mg-t2" required>
           {% endif %}
           {% if postal %}
-            <input type="text" name="" value="{{postal}}" placeholder="Code Postale" class="mg-t2">
+            <input type="text" name="" value="{{postal}}" placeholder="Code Postale" class="mg-t2" required>
           {% else %}
-            <input type="text" name="" placeholder="Code Postale" class="mg-t2">
+            <input type="text" name="" placeholder="Code Postale" class="mg-t2" required>
           {% endif %}
         </div>
         {% if phone %}
-          <input type="text" name="" value="{{phone}}" placeholder="Téléphone" class="full-w mg-t2">
+          <input type="text" name="" value="{{phone}}" placeholder="Téléphone" class="full-w mg-t2" required>
         {% else %}
-          <input type="text" name="" placeholder="Téléphone" class="full-w mg-t2">
+          <input type="text" name="" placeholder="Téléphone" class="full-w mg-t2" required>
         {% endif %}
         <input type="submit" name="" value="continuer" class="upper bold btn mainbtn block mauto-w mg-t2 pd-l3 pd-r3 is-size-5">
       </form>

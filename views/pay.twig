@@ -5,95 +5,26 @@
 
 {% block content %}
 <main id="pay">
-  <style media="screen">
-      .StripeElement {
-    background-color: white;
-    height: 40px;
-    padding: 10px 12px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-    }
-
-    .StripeElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    }
-
-    .StripeElement--invalid {
-    border-color: #fa755a;
-    }
-
-    .StripeElement--webkit-autofill {
-    background-color: #fefde5 !important;
-    }
-  </style>
-  <!-- <section class="section">
+  <section class="section">
     <div class="container">
-      <h1 class="bold upper is-size-3">paiement</h1>
-      <p class="is-size-4">A payer : <span>7.89</span>€</p>
-      <form action="/confirm" class="mg-t3" id="pay-form">
-        <input type="number" name="credit-number" placeholder="Numéro de carte">
-        <div class="mg-t2">
-          <label for="expiration-month">Date d'expiration</label>
-          <div class="flex align-ctr mg-t1">
-            <select class="bold" name="credit-expiration-month">
-              <option value="">01</option>
-              <option value="">02</option>
-              <option value="">03</option>
-              <option value="">04</option>
-              <option value="">05</option>
-              <option value="">06</option>
-              <option value="">07</option>
-              <option value="">08</option>
-              <option value="">09</option>
-              <option value="">10</option>
-              <option value="">11</option>
-              <option value="">12</option>
-            </select>
-            <span class="mg-l1 mg-r1">/</span>
-            <select class="bold" name="credit-expiration-year">
-              <option value="">2018</option>
-              <option value="">2019</option>
-              <option value="">2020</option>
-              <option value="">2021</option>
-              <option value="">2022</option>
-              <option value="">2023</option>
-              <option value="">2024</option>
-              <option value="">2025</option>
-              <option value="">2026</option>
-              <option value="">2027</option>
-              <option value="">2028</option>
-            </select>
-          </div>
+      <h1 class="bold is-size-2 upper has-text-centered mg-b5">Paiement</h1>
+      <div class="columns">
+        <div class="column">
+          <p>résumé livraison</p>
         </div>
-        <div class="mg-t2">
-          <label for="credit-CVC">Code de validation</label>
-          <input type="number" name="credit-CVC" value="" class="mg-t1">
+        <div class="column">
+          <form method="post" id="payment-form">
+            <div class="form-row">
+              <div id="card-element"></div>
+              <div id="card-errors" role="alert"></div>
+            </div>
+            <button class="button mainbtn upper bold mg-t2">Payer</button>
+          </form>
         </div>
-        <input type="submit" class="btn mainbtn bold upper mg-t2" name="" value="Payer">
-      </form>
-    </div>
-  </section> -->
-  <script src="https://js.stripe.com/v3/"></script>
-
-  <form action="/charge" method="post" id="payment-form">
-    <div class="form-row">
-      <label for="card-element">
-        Credit or debit card
-      </label>
-      <div id="card-element">
-        <!-- A Stripe Element will be inserted here. -->
       </div>
-
-      <!-- Used to display form errors. -->
-      <div id="card-errors" role="alert"></div>
     </div>
-
-    <button>Submit Payment</button>
-  </form>
+  </section>
 </main>
-
+<script src="https://js.stripe.com/v3/"></script>
 <script src="static/js/vendors/stripe.js" charset="utf-8"></script>
 {% endblock %}

@@ -6,6 +6,7 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 var item = getCookie("item");
+var adress = getCookie("adress");
 
 function getCookie(cname) {
 	var name = cname + "=";
@@ -60,5 +61,24 @@ function quantityCookies(cartitems) {
 			quantity
 		})
 		setCookie("item", JSON.stringify(item_infos), 30);
+	}
+}
+
+function adressCookies(cartitems) {
+	var adress_infos = [];
+	for (var i = 0; i < cartitems.length; i++) {
+		var ele = cartitems[i];
+		var name = ele.childNodes[1].childNodes[3].childNodes[1].innerHTML
+		var price = ele.childNodes[1].childNodes[3].childNodes[3].firstChild.innerHTML
+		var img = ele.childNodes[1].childNodes[1].childNodes[1].src
+		var quantity = ele.childNodes[3].childNodes[3].innerHTML
+
+		adress_infos.push({
+			name,
+			price,
+			img,
+			quantity
+		})
+		setCookie("adress", JSON.stringify(adress_infos), 30);
 	}
 }

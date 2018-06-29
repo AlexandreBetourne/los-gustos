@@ -9,7 +9,7 @@ var co = mysql.createConnection({
 
 co.connect(function(err) {
 	if (err) throw err;
-	console.log('You are now connected at database')
+	console.log("\x1b[35m", 'You are now connected at database with Alwaysdata')
 });
 
 function sendQuery(query, callback) {
