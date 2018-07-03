@@ -6,7 +6,7 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 var item = getCookie("item");
-var adress = getCookie("adress");
+var delivering = getCookie("delivering");
 
 function getCookie(cname) {
 	var name = cname + "=";
@@ -64,21 +64,17 @@ function quantityCookies(cartitems) {
 	}
 }
 
-function adressCookies(cartitems) {
-	var adress_infos = [];
-	for (var i = 0; i < cartitems.length; i++) {
-		var ele = cartitems[i];
-		var name = ele.childNodes[1].childNodes[3].childNodes[1].innerHTML
-		var price = ele.childNodes[1].childNodes[3].childNodes[3].firstChild.innerHTML
-		var img = ele.childNodes[1].childNodes[1].childNodes[1].src
-		var quantity = ele.childNodes[3].childNodes[3].innerHTML
-
-		adress_infos.push({
-			name,
-			price,
-			img,
-			quantity
-		})
-		setCookie("adress", JSON.stringify(adress_infos), 30);
+function adressCookies(event) {
+	event.preventDefault();
+	var inputs = document.querySelectorAll("input[type=text]");
+	var inputs_value = {
+		lastName: inputs[0].value,
+		firstName: inputs[1].value,
+		adress: inputs[2].value,
+		city: inputs[3].value,
+		postale: inputs[4].value,
+		phone: inputs[5].value
 	}
+	console.log(inputs_value);
+	setCookie("delivering", JSON.stringify(inputs_value), 30);
 }
