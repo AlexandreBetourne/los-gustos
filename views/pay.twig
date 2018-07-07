@@ -9,9 +9,7 @@
     <div class="container">
       <h1 class="bold is-size-2 upper has-text-centered mg-b5">Paiement</h1>
       <div class="columns">
-        <div class="column">
-          <p>résumé livraison</p>
-        </div>
+        <div class="column" id="abstract"></div>
         <div class="column">
           <form method="post" id="payment-form">
             <div class="form-row">
@@ -27,4 +25,11 @@
 </main>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="static/js/vendors/stripe.js" charset="utf-8"></script>
+<script type="text/javascript">
+//RESTORE DELIVERING INFO
+var delivery_cookies = JSON.parse(delivering)
+var totalPrice = JSON.parse(totalPrice)
+var delivering_infos = `<p class='is-size-4'>Montant à payer : ${totalPrice} €</p><br><p class="is-size-4">Livraison :</p><p>${delivery_cookies.firstName} ${delivery_cookies.lastName}</p><p>${delivery_cookies.adress}, ${delivery_cookies.postale}, ${delivery_cookies.city}</p><p>${delivery_cookies.phone}</p>`
+document.getElementById('abstract').insertAdjacentHTML("afterbegin", delivering_infos)
+</script>
 {% endblock %}

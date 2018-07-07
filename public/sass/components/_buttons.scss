@@ -12,3 +12,9 @@
   transition: 0.3s ease;
   -webkit-appearance: none;
 }
+
+.scdbtn {
+  border: solid 2px map-get($colors, red) !important;
+  color: map-get($colors, red) !important;
+  background: white !important;
+}

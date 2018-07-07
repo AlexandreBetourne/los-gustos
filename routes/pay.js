@@ -25,7 +25,8 @@ router.post('/', function(req, res, next) {
 	// 	receipt_email: 'alexandre.betourne.pro@gmail.com',
 	// });
 	// res.json(req.body)
-	res.redirect('/confirm');
+	// res.redirect('/confirm');
+	console.log(req.body);
 });
 
 module.exports = router;

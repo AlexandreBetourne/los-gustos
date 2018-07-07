@@ -42,7 +42,8 @@ form.addEventListener('submit', function(event) {
 			var errorElement = document.getElementById('card-errors');
 			errorElement.textContent = result.error.message;
 		} else {
-			stripeTokenHandler(result.token);
+			console.log(result.token.card);
+			// stripeTokenHandler(result.token);
 		}
 	});
 });

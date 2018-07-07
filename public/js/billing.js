@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 	//SET TOTAL PRICE
 	totalPrice()
-	///////<------->////////
 })
 
 function totalPrice() {
@@ -36,6 +35,11 @@ function totalPrice() {
 		totalPrice += final_price
 	}
 	document.getElementById('innerTotalPrice').innerHTML = totalPrice.toFixed(2)
+	setCookie("totalPrice", totalPrice.toFixed(2), 30);
+	if (totalPrice == 0) {
+		checkoutcartcookies([])
+		window.location.replace("/");
+	}
 }
 
 function plus(event) {
@@ -43,7 +47,10 @@ function plus(event) {
 	var counter = event.target.parentNode.parentNode.previousElementSibling.firstElementChild.firstElementChild
 	var newvalue = parseInt(counter.innerHTML) + 1
 	counter.innerHTML = newvalue
-	quantityCookies(document.querySelectorAll('.filled'))
+	if (newvalue != 0) {
+		event.target.parentNode.parentNode.previousElementSibling.childNodes[5].classList.remove('line-through')
+	}
+	checkoutcartcookies(document.querySelectorAll('#summary .item'))
 }
 
 function less(event) {
@@ -52,7 +59,10 @@ function less(event) {
 	var newvalue = parseInt(counter.innerHTML)
 	if (parseInt(counter.innerHTML) > 1) {
 		newvalue -= 1
+	} else {
+		event.target.parentNode.parentNode.previousElementSibling.childNodes[5].classList.add('line-through')
+		newvalue = 0
 	}
 	counter.innerHTML = newvalue
-	quantityCookies(document.querySelectorAll('.filled'))
+	checkoutcartcookies(document.querySelectorAll('#summary .item'))
 }

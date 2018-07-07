@@ -7,6 +7,7 @@ function setCookie(cname, cvalue, exdays) {
 
 var item = getCookie("item");
 var delivering = getCookie("delivering");
+var totalPrice = getCookie("totalPrice")
 
 function getCookie(cname) {
 	var name = cname + "=";
@@ -24,48 +25,45 @@ function getCookie(cname) {
 	return "";
 }
 
-function checkCartCookie(cartitems) {
+function sidemenuecookies(cartitems) {
 	var item_infos = [];
 	for (var i = 0; i < cartitems.length; i++) {
-		if (cartitems[i].el.classList.contains("filled")) {
-			var ele = cartitems[i].el;
+		if (cartitems[i].classList.contains("filled")) {
+			var ele = cartitems[i];
 			var name = ele.childNodes[1].childNodes[3].childNodes[1].innerHTML
 			var price = ele.childNodes[1].childNodes[3].childNodes[3].firstChild.innerHTML
 			var img = ele.childNodes[1].childNodes[1].childNodes[1].src
 			var quantity = ele.childNodes[3].childNodes[3].innerHTML
-
 			item_infos.push({
 				name,
 				price,
 				img,
 				quantity
 			})
-			setCookie("item", JSON.stringify(item_infos), 30);
 		}
 	}
+	setCookie("item", JSON.stringify(item_infos), 30);
 }
 
-function quantityCookies(cartitems) {
+function checkoutcartcookies(cartitems) {
 	var item_infos = [];
 	for (var i = 0; i < cartitems.length; i++) {
 		var ele = cartitems[i];
-		var name = ele.childNodes[1].childNodes[3].childNodes[1].innerHTML
-		var price = ele.childNodes[1].childNodes[3].childNodes[3].firstChild.innerHTML
-		var img = ele.childNodes[1].childNodes[1].childNodes[1].src
-		var quantity = ele.childNodes[3].childNodes[3].innerHTML
-
+		var name = ele.childNodes[1].childNodes[5].innerHTML
+		var price = ele.childNodes[3].childNodes[1].childNodes[0].innerHTML
+		var img = ele.childNodes[1].childNodes[3].childNodes[1].src
+		var quantity = ele.childNodes[1].childNodes[1].childNodes[0].innerHTML
 		item_infos.push({
 			name,
 			price,
 			img,
 			quantity
 		})
-		setCookie("item", JSON.stringify(item_infos), 30);
 	}
+	setCookie("item", JSON.stringify(item_infos), 30);
 }
 
 function adressCookies(event) {
-	event.preventDefault();
 	var inputs = document.querySelectorAll("input[type=text]");
 	var inputs_value = {
 		lastName: inputs[0].value,
@@ -75,6 +73,5 @@ function adressCookies(event) {
 		postale: inputs[4].value,
 		phone: inputs[5].value
 	}
-	console.log(inputs_value);
 	setCookie("delivering", JSON.stringify(inputs_value), 30);
 }

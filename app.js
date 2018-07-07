@@ -7,6 +7,7 @@ var mysql = require('mysql')
 var session = require('express-session')
 var logger = require('morgan');
 require('dotenv').config();
+var bodyParser = require('body-parser')
 
 
 var indexRouter = require('./routes/index');

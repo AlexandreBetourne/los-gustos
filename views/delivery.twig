@@ -8,7 +8,7 @@
   <section class="section">
     <div class="container">
       <h1 class="upper bold is-size-3 mg-b3 has-text-centered">adresse de livraison</h1>
-      <form class="mauto-w" id="delivery-form" onsubmit="adressCookies(event)">
+      <form class="mauto-w" id="delivery-form" action="/pay" onsubmit="adressCookies(event)">
         <div class="half-inputs">
           <input type="text" name="" value="{{lastName}}" placeholder="Nom" required>
           <input type="text" name="" value="{{firstName}}" placeholder="Prénom" required>
@@ -40,4 +40,5 @@
     </div>
   </section>
 </main>
+
 {% endblock %}

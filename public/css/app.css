@@ -103,712 +103,717 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
 }
 
-/* line 36, ../sass/common/_structure.scss */
+/* line 35, ../sass/common/_structure.scss */
+.line-through {
+  text-decoration: line-through;
+}
+
+/* line 40, ../sass/common/_structure.scss */
 .zind1 {
   z-index: 1;
 }
 
-/* line 40, ../sass/common/_structure.scss */
+/* line 44, ../sass/common/_structure.scss */
 .zind2 {
   z-index: 2;
 }
 
-/* line 44, ../sass/common/_structure.scss */
+/* line 48, ../sass/common/_structure.scss */
 .zind3 {
   z-index: 3;
 }
 
 /*/
 ///////BORDER////////*/
-/* line 50, ../sass/common/_structure.scss */
+/* line 54, ../sass/common/_structure.scss */
 .bdr {
   border-radius: 3px;
 }
 
-/* line 54, ../sass/common/_structure.scss */
+/* line 58, ../sass/common/_structure.scss */
 .bdr-top {
   border-radius: 10px 10px 0 0;
 }
 
-/* line 58, ../sass/common/_structure.scss */
+/* line 62, ../sass/common/_structure.scss */
 .bdr-bottom {
   border-radius: 0 0 10px 10px;
 }
 
-/* line 62, ../sass/common/_structure.scss */
+/* line 66, ../sass/common/_structure.scss */
 .bdr-none {
   border-radius: none;
 }
 
-/* line 66, ../sass/common/_structure.scss */
+/* line 70, ../sass/common/_structure.scss */
 .bd-top {
   border-top: 2px solid #000;
 }
 
-/* line 70, ../sass/common/_structure.scss */
+/* line 74, ../sass/common/_structure.scss */
 .bd-bot {
   border-bottom: 2px solid #000;
 }
 
-/* line 74, ../sass/common/_structure.scss */
+/* line 78, ../sass/common/_structure.scss */
 .bbox {
   box-sizing: border-box;
 }
 
-/* line 78, ../sass/common/_structure.scss */
+/* line 82, ../sass/common/_structure.scss */
 .over_hide {
   overflow: hidden;
 }
 
-/* line 82, ../sass/common/_structure.scss */
+/* line 86, ../sass/common/_structure.scss */
 .full-w {
   width: 100%;
 }
 
-/* line 86, ../sass/common/_structure.scss */
+/* line 90, ../sass/common/_structure.scss */
 .full-h {
   height: 100%;
 }
 
-/* line 90, ../sass/common/_structure.scss */
+/* line 94, ../sass/common/_structure.scss */
 .min-content {
   width: min-content;
 }
 
-/* line 94, ../sass/common/_structure.scss */
+/* line 98, ../sass/common/_structure.scss */
 .max-content {
   width: max-content;
 }
 
 /*/
 ///////TEXT////////*/
-/* line 100, ../sass/common/_structure.scss */
+/* line 104, ../sass/common/_structure.scss */
 .text_center {
   text-align: center;
 }
 
-/* line 104, ../sass/common/_structure.scss */
+/* line 108, ../sass/common/_structure.scss */
 .upper {
   text-transform: uppercase;
 }
 
-/* line 108, ../sass/common/_structure.scss */
+/* line 112, ../sass/common/_structure.scss */
 .is-capitalize {
   text-transform: capitalize;
 }
 
-/* line 112, ../sass/common/_structure.scss */
+/* line 116, ../sass/common/_structure.scss */
 .bold {
   font-weight: 900 !important;
 }
 
-/* line 116, ../sass/common/_structure.scss */
+/* line 120, ../sass/common/_structure.scss */
 .thin {
   font-weight: thin;
 }
 
 /*/
 ///////MARGIN - PADDING////////*/
-/* line 122, ../sass/common/_structure.scss */
+/* line 126, ../sass/common/_structure.scss */
 .mauto-w {
   margin: 0 auto;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg0 {
   margin: 0px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd0 {
   padding: 0px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b0 {
   margin-bottom: 0px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t0 {
   margin-top: 0px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l0 {
   margin-left: 0px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r0 {
   margin-right: 0px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b0 {
   padding-bottom: 0px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t0 {
   padding-top: 0px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l0 {
   padding-left: 0px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r0 {
   padding-right: 0px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg1 {
   margin: 10px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd1 {
   padding: 10px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b1 {
   margin-bottom: 10px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t1 {
   margin-top: 10px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l1 {
   margin-left: 10px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r1 {
   margin-right: 10px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b1 {
   padding-bottom: 10px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t1 {
   padding-top: 10px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l1 {
   padding-left: 10px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r1 {
   padding-right: 10px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg2 {
   margin: 20px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd2 {
   padding: 20px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b2 {
   margin-bottom: 20px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t2 {
   margin-top: 20px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l2 {
   margin-left: 20px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r2 {
   margin-right: 20px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b2 {
   padding-bottom: 20px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t2 {
   padding-top: 20px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l2 {
   padding-left: 20px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r2 {
   padding-right: 20px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg3 {
   margin: 30px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd3 {
   padding: 30px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b3 {
   margin-bottom: 30px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t3 {
   margin-top: 30px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l3 {
   margin-left: 30px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r3 {
   margin-right: 30px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b3 {
   padding-bottom: 30px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t3 {
   padding-top: 30px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l3 {
   padding-left: 30px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r3 {
   padding-right: 30px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg4 {
   margin: 40px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd4 {
   padding: 40px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b4 {
   margin-bottom: 40px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t4 {
   margin-top: 40px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l4 {
   margin-left: 40px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r4 {
   margin-right: 40px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b4 {
   padding-bottom: 40px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t4 {
   padding-top: 40px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l4 {
   padding-left: 40px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r4 {
   padding-right: 40px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg5 {
   margin: 50px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd5 {
   padding: 50px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b5 {
   margin-bottom: 50px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t5 {
   margin-top: 50px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l5 {
   margin-left: 50px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r5 {
   margin-right: 50px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b5 {
   padding-bottom: 50px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t5 {
   padding-top: 50px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l5 {
   padding-left: 50px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r5 {
   padding-right: 50px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg6 {
   margin: 60px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd6 {
   padding: 60px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b6 {
   margin-bottom: 60px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t6 {
   margin-top: 60px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l6 {
   margin-left: 60px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r6 {
   margin-right: 60px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b6 {
   padding-bottom: 60px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t6 {
   padding-top: 60px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l6 {
   padding-left: 60px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r6 {
   padding-right: 60px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg7 {
   margin: 70px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd7 {
   padding: 70px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b7 {
   margin-bottom: 70px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t7 {
   margin-top: 70px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l7 {
   margin-left: 70px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r7 {
   margin-right: 70px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b7 {
   padding-bottom: 70px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t7 {
   padding-top: 70px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l7 {
   padding-left: 70px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r7 {
   padding-right: 70px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg8 {
   margin: 80px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd8 {
   padding: 80px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b8 {
   margin-bottom: 80px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t8 {
   margin-top: 80px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l8 {
   margin-left: 80px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r8 {
   margin-right: 80px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b8 {
   padding-bottom: 80px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t8 {
   padding-top: 80px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l8 {
   padding-left: 80px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r8 {
   padding-right: 80px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg9 {
   margin: 90px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd9 {
   padding: 90px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b9 {
   margin-bottom: 90px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t9 {
   margin-top: 90px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l9 {
   margin-left: 90px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r9 {
   margin-right: 90px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b9 {
   padding-bottom: 90px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t9 {
   padding-top: 90px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l9 {
   padding-left: 90px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r9 {
   padding-right: 90px;
 }
 
-/* line 126, ../sass/common/_structure.scss */
+/* line 130, ../sass/common/_structure.scss */
 .mg10 {
   margin: 100px;
 }
 
-/* line 130, ../sass/common/_structure.scss */
+/* line 134, ../sass/common/_structure.scss */
 .pd10 {
   padding: 100px;
 }
 
 /*/
 ///////MARGIN////////*/
-/* line 135, ../sass/common/_structure.scss */
+/* line 139, ../sass/common/_structure.scss */
 .mg-b10 {
   margin-bottom: 100px;
 }
 
-/* line 139, ../sass/common/_structure.scss */
+/* line 143, ../sass/common/_structure.scss */
 .mg-t10 {
   margin-top: 100px;
 }
 
-/* line 143, ../sass/common/_structure.scss */
+/* line 147, ../sass/common/_structure.scss */
 .mg-l10 {
   margin-left: 100px;
 }
 
-/* line 147, ../sass/common/_structure.scss */
+/* line 151, ../sass/common/_structure.scss */
 .mg-r10 {
   margin-right: 100px;
 }
 
 /*/
 ///////PADDING////////*/
-/* line 152, ../sass/common/_structure.scss */
+/* line 156, ../sass/common/_structure.scss */
 .pd-b10 {
   padding-bottom: 100px;
 }
 
-/* line 156, ../sass/common/_structure.scss */
+/* line 160, ../sass/common/_structure.scss */
 .pd-t10 {
   padding-top: 100px;
 }
 
-/* line 160, ../sass/common/_structure.scss */
+/* line 164, ../sass/common/_structure.scss */
 .pd-l10 {
   padding-left: 100px;
 }
 
-/* line 164, ../sass/common/_structure.scss */
+/* line 168, ../sass/common/_structure.scss */
 .pd-r10 {
   padding-right: 100px;
 }
 
-/* line 169, ../sass/common/_structure.scss */
+/* line 173, ../sass/common/_structure.scss */
 input:focus {
   outline: none;
 }
@@ -849,6 +854,13 @@ input:focus {
   border-radius: 5px;
   transition: 0.3s ease;
   -webkit-appearance: none;
+}
+
+/* line 16, ../sass/components/_buttons.scss */
+.scdbtn {
+  border: solid 2px #E00303 !important;
+  color: #E00303 !important;
+  background: white !important;
 }
 
 /* line 1, ../sass/components/_inputs.scss */
@@ -1150,11 +1162,11 @@ a {
 #createaccount .buttons .button {
   width: 150px;
 }
-/* line 226, ../sass/components/_recurrent.scss */
-#createaccount .buttons .button:last-child {
-  border: solid 2px #E00303 !important;
-  color: #E00303 !important;
-  background: white !important;
+
+/* line 228, ../sass/components/_recurrent.scss */
+.modal-content {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @font-face {

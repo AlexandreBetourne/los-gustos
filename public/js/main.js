@@ -24,15 +24,17 @@ for (var i = 0; i < item_cookies.length; i++) {
 function plus_amount(event) {
 	var amount = event.target.parentNode.childNodes[3]
 	amount.innerHTML = parseInt(amount.innerHTML) + 1
-	quantityCookies(document.querySelectorAll('.filled'))
+	sidemenuecookies(document.querySelectorAll('.filled'))
 }
 
 function less_amount(event) {
 	var amount = event.target.parentNode.childNodes[3]
 	if (parseInt(amount.innerHTML) > 1) {
 		amount.innerHTML = parseInt(amount.innerHTML) - 1
+	} else {
+		event.target.parentNode.parentNode.remove()
 	}
-	quantityCookies(document.querySelectorAll('.filled'))
+	sidemenuecookies(document.querySelectorAll('.filled'))
 }
 
 function scroll_drop_area(event) {
