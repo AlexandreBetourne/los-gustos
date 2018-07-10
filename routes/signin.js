@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../services/database.js');
+var bcrypt = require('bcrypt');
 
 
 router.get('/', function(req, res, next) {
@@ -18,29 +19,29 @@ router.post('/', function(req, res, next) {
 		if (err) {
 			console.log(err)
 		} else {
-			if (req.body.password != log[0].password) {
-				res.render('signin', {
-					error: 'Mot de passe incorrect'
-				});
-			} else {
-				var session = req.session
-				session.user = {
-					connected: true,
-					lastName: log[0].lastname,
-					firstName: log[0].firstname,
-					email: log[0].email,
-					password: log[0].password,
-					adress: log[0].adress,
-					city: log[0].city,
-					post: log[0].postal,
-					phone: log[0].phone
+			bcrypt.compare(req.body.password, log[0].password, function(err, result) {
+				if (result == false) {
+					res.render('signin', {
+						error: 'Mot de passe incorrect'
+					});
+				} else {
+					var session = req.session
+					session.user = {
+						connected: true,
+						lastName: log[0].lastname,
+						firstName: log[0].firstname,
+						email: log[0].email,
+						password: log[0].password,
+						adress: log[0].adress,
+						city: log[0].city,
+						post: log[0].postal,
+						phone: log[0].phone
+					}
+					res.redirect('/');
 				}
-				res.redirect('/');
-			}
+			});
 		}
 	})
-
-
 });
 
 module.exports = router;

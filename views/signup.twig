@@ -15,6 +15,9 @@
             <input type="text" name="lastname" placeholder="Nom*" required>
           </div>
           <input type="email" name="email" placeholder="Adresse Mail*" class="full-w mg-t1" required>
+          {% if email_error %}
+          <span class="text__is-red is-size-7">{{email_error}}</span>
+          {% endif %}
           <input type="password" name="password" placeholder="Mot de Passe*" class="mg-t1 full-w" required>
           <input type="tel" name="phone" placeholder="Téléphone" class="mg-t1 full-w">
           <input type="text" name="adress" placeholder="Adresse" class="mg-t1 full-w">
