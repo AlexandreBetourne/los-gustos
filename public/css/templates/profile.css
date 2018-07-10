@@ -1,8 +1,28 @@
 /* line 2, ../../sass/templates/profile.scss */
 #profile hr {
   background-color: black;
+  margin: 0;
 }
-/* line 6, ../../sass/templates/profile.scss */
+/* line 7, ../../sass/templates/profile.scss */
 #profile span {
   margin: 5px 0;
+}
+/* line 11, ../../sass/templates/profile.scss */
+#profile .info {
+  padding: 30px 0;
+  position: relative;
+}
+/* line 15, ../../sass/templates/profile.scss */
+#profile .info a {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* line 22, ../../sass/templates/profile.scss */
+#profile input {
+  width: 100%;
+}
+/* line 25, ../../sass/templates/profile.scss */
+#profile input:not(:last-child) {
+  margin-bottom: 10px;
 }

@@ -1,10 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var stripe = require("stripe")(
-	"sk_test_8wvNaHZbOntAvBJrCt5QxhWN"
-);
-
 router.get('/', function(req, res, next) {
 	if (req.session.user) {
 		res.render('pay', {
@@ -15,8 +11,10 @@ router.get('/', function(req, res, next) {
 	}
 });
 
-
 router.post('/', function(req, res, next) {
+	var stripe = require("stripe")(
+		"sk_test_8wvNaHZbOntAvBJrCt5QxhWN"
+	);
 	const token = req.body.stripeToken;
 	// const charge = stripe.charges.create({
 	// 	amount: 999,

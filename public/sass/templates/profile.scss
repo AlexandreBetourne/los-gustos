@@ -1,9 +1,29 @@
 #profile {
   hr {
     background-color: black;
+    margin: 0;
   }
 
   span {
     margin: 5px 0;
+  }
+
+  .info {
+    padding: 30px 0;
+    position: relative;
+
+    a {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  input {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }

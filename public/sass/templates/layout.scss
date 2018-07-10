@@ -1,9 +1,24 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
 body {
   color: map-get($colors, black);
   font-weight: bold;
   line-height: inherit;
+  position: relative;
+  margin: 0;
+  padding-bottom: 184px !important;
+  min-height: 100%;
   @media screen and (max-width: $break-medium) {
-    padding-bottom: 60px !important;
+    padding-bottom: 328px !important;
   }
 }
 
@@ -79,5 +94,18 @@ header {
   &__bottom {
     border-bottom: solid 1px white;
     width: 40px;
+  }
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  @media screen and (max-width: $break-medium) {
+    margin-bottom: 60px;
   }
 }

@@ -1,17 +1,21 @@
 /*
 Error: Undefined variable: "$colors".
-        on line 2 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss
+        on line 13 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss
 
-1: body {
-2:   color: map-get($colors, black);
-3:   font-weight: bold;
-4:   line-height: inherit;
-5:   @media screen and (max-width: $break-medium) {
-6:     padding-bottom: 60px !important;
-7:   }
+8: *:before {
+9:   box-sizing: inherit;
+10: }
+11: 
+12: body {
+13:   color: map-get($colors, black);
+14:   font-weight: bold;
+15:   line-height: inherit;
+16:   position: relative;
+17:   margin: 0;
+18:   padding-bottom: 184px !important;
 
 Backtrace:
-/Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss:2
+/Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss:13
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/funcall.rb:173:in `perform_arg'
@@ -69,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$colors\".\A         on line 2 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss\A \A 1: body {\A 2:   color: map-get($colors, black);\A 3:   font-weight: bold;\A 4:   line-height: inherit;\A 5:   @media screen and (max-width: $break-medium) {\A 6:     padding-bottom: 60px !important;\A 7:   }"; }
+  content: "Error: Undefined variable: \"$colors\".\A         on line 13 of /Users/alexandrebetourne/Sites/webstart/los-gustos/engine/public/sass/templates/layout.scss\A \A 8: *:before {\A 9:   box-sizing: inherit;\A 10: }\A 11: \A 12: body {\A 13:   color: map-get($colors, black);\A 14:   font-weight: bold;\A 15:   line-height: inherit;\A 16:   position: relative;\A 17:   margin: 0;\A 18:   padding-bottom: 184px !important;"; }

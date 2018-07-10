@@ -1206,48 +1206,65 @@ body {
 }
 
 /* line 1, ../sass/templates/layout.scss */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* line 6, ../sass/templates/layout.scss */
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/* line 12, ../sass/templates/layout.scss */
 body {
   color: #000;
   font-weight: bold;
   line-height: inherit;
+  position: relative;
+  margin: 0;
+  padding-bottom: 184px !important;
+  min-height: 100%;
 }
 @media screen and (max-width: 769px) {
-  /* line 1, ../sass/templates/layout.scss */
+  /* line 12, ../sass/templates/layout.scss */
   body {
-    padding-bottom: 60px !important;
+    padding-bottom: 328px !important;
   }
 }
 
-/* line 10, ../sass/templates/layout.scss */
+/* line 25, ../sass/templates/layout.scss */
 header {
   top: 0;
   z-index: 1000000;
 }
-/* line 14, ../sass/templates/layout.scss */
+/* line 29, ../sass/templates/layout.scss */
 header a[href="signin"],
 header a[href="profile"] {
   border-right: solid 1px white;
   border-left: solid 1px white;
 }
 @media screen and (max-width: 769px) {
-  /* line 19, ../sass/templates/layout.scss */
+  /* line 34, ../sass/templates/layout.scss */
   header a[href="signin"] span,
   header a[href="profile"] span {
     display: none;
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 27, ../sass/templates/layout.scss */
+  /* line 42, ../sass/templates/layout.scss */
   header a[href="/#catalog"] span {
     display: none;
   }
 }
-/* line 34, ../sass/templates/layout.scss */
+/* line 49, ../sass/templates/layout.scss */
 header nav a {
   padding: 0 20px;
 }
 @media screen and (max-width: 769px) {
-  /* line 33, ../sass/templates/layout.scss */
+  /* line 48, ../sass/templates/layout.scss */
   header nav {
     justify-content: space-between;
     position: fixed;
@@ -1257,7 +1274,7 @@ header nav a {
     width: 100vw;
     background: #E00303;
   }
-  /* line 46, ../sass/templates/layout.scss */
+  /* line 61, ../sass/templates/layout.scss */
   header nav a {
     padding: 15px 0;
     width: calc(100%/3);
@@ -1266,30 +1283,47 @@ header nav a {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 55, ../sass/templates/layout.scss */
+  /* line 70, ../sass/templates/layout.scss */
   header > div {
     display: block !important;
   }
-  /* line 60, ../sass/templates/layout.scss */
+  /* line 75, ../sass/templates/layout.scss */
   header > div > div:first-child a {
     margin: 0 auto;
   }
 }
 
-/* line 69, ../sass/templates/layout.scss */
+/* line 84, ../sass/templates/layout.scss */
 #logo {
   width: 100px;
 }
 
-/* line 74, ../sass/templates/layout.scss */
+/* line 89, ../sass/templates/layout.scss */
 .border__right {
   border-right: solid 1px white;
   height: 40px;
 }
-/* line 79, ../sass/templates/layout.scss */
+/* line 94, ../sass/templates/layout.scss */
 .border__bottom {
   border-bottom: solid 1px white;
   width: 40px;
+}
+
+/* line 100, ../sass/templates/layout.scss */
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+@media screen and (max-width: 769px) {
+  /* line 100, ../sass/templates/layout.scss */
+  footer {
+    margin-bottom: 60px;
+  }
 }
 
 /* line 2, ../sass/templates/index.scss */
@@ -1758,10 +1792,30 @@ header nav a {
 /* line 2, ../sass/templates/profile.scss */
 #profile hr {
   background-color: black;
+  margin: 0;
 }
-/* line 6, ../sass/templates/profile.scss */
+/* line 7, ../sass/templates/profile.scss */
 #profile span {
   margin: 5px 0;
+}
+/* line 11, ../sass/templates/profile.scss */
+#profile .info {
+  padding: 30px 0;
+  position: relative;
+}
+/* line 15, ../sass/templates/profile.scss */
+#profile .info a {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* line 22, ../sass/templates/profile.scss */
+#profile input {
+  width: 100%;
+}
+/* line 25, ../sass/templates/profile.scss */
+#profile input:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 /* line 1, ../sass/templates/pay.scss */
