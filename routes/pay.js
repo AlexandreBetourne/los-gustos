@@ -2,13 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-	if (req.session.user) {
-		res.render('pay', {
-			user: req.session.user.connected
-		});
-	} else {
-		res.render('pay');
-	}
+	res.render('pay', {
+		user: req.session.user.connected
+	});
 });
 
 router.post('/', function(req, res, next) {

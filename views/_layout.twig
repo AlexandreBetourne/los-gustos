@@ -161,9 +161,17 @@
           //OPEN CART ON CLICK
         	document.getElementById("cart_icon").addEventListener("click", function(event) {
         		document.getElementById('drop-area').classList.toggle('show');
+            // document.getElementById('drop-overlay').style.opacity = 0;
         		document.documentElement.classList.toggle('over_hide');
         	}, false);
     		</script>
+        <script type="text/javascript">
+          document.onclick = function(e){
+            if(e.target.id == 'drop-overlay'){
+                document.getElementById('drop-area').classList.remove('show');
+            }
+          };
+        </script>
 
         <footer class="{{ footerClass }} full-w bbox background__is-green pd2">
           <div class="container">

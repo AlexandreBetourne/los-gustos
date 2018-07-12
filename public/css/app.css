@@ -1138,32 +1138,33 @@ a {
 .drop-overlay {
   top: 82px !important;
   z-index: 10;
+  pointer-events: inherit !important;
 }
-/* line 204, ../sass/components/_recurrent.scss */
+/* line 205, ../sass/components/_recurrent.scss */
 .drop-overlay.scrolled {
   top: 0 !important;
 }
 
-/* line 209, ../sass/components/_recurrent.scss */
+/* line 210, ../sass/components/_recurrent.scss */
 #items_container {
   margin-top: 10px;
 }
 
-/* line 214, ../sass/components/_recurrent.scss */
+/* line 215, ../sass/components/_recurrent.scss */
 #createaccount section {
   padding: 200px 1.5rem;
 }
-/* line 218, ../sass/components/_recurrent.scss */
+/* line 219, ../sass/components/_recurrent.scss */
 #createaccount .buttons {
   width: 310px;
   margin: 0 auto;
 }
-/* line 222, ../sass/components/_recurrent.scss */
+/* line 223, ../sass/components/_recurrent.scss */
 #createaccount .buttons .button {
   width: 150px;
 }
 
-/* line 228, ../sass/components/_recurrent.scss */
+/* line 229, ../sass/components/_recurrent.scss */
 .modal-content {
   top: 50%;
   transform: translateY(-50%);

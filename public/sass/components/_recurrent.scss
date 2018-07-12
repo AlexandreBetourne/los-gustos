@@ -200,6 +200,7 @@ a {
 .drop-overlay {
   top: 82px !important;
   z-index: 10;
+  pointer-events: inherit !important;
 
   &.scrolled {
     top: 0 !important;

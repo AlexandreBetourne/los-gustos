@@ -3,13 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	if (req.session.user) {
-		res.render('cart', {
-			user: req.session.user.connected
-		});
-	} else {
-		res.render('cart');
-	}
+	res.render('cart', {
+		user: req.session.user.connected
+	});
 });
 
 module.exports = router;
