@@ -25,9 +25,9 @@ router.post('/', function(req, res, next) {
 						error: 'Mot de passe incorrect'
 					});
 				} else {
-					var session = req.session
-					session.user = {
+					req.session.user = {
 						connected: true,
+						id: log[0].id,
 						lastName: log[0].lastname,
 						firstName: log[0].firstname,
 						email: log[0].email,
