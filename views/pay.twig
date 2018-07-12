@@ -20,8 +20,9 @@
               <div id="card-element"></div>
               <div id="card-errors" role="alert"></div>
             </div>
-            <input type="hidden" name="id_token">
             <button class="button mainbtn upper bold mg-t2">Payer</button>
+            <input type="hidden" name="price">
+            <input type="hidden" name="id_token">
           </form>
         </div>
       </div>
@@ -33,8 +34,9 @@
 <script type="text/javascript">
 //RESTORE DELIVERING INFO
 var delivery_cookies = JSON.parse(delivering)
-var totalPrice = JSON.parse(totalPrice)
+document.querySelector('input[name=price]').value = totalPrice
 var delivering_infos = `<p class='is-size-4'>Montant à payer : ${totalPrice} €</p><br><p class="is-size-4">Livraison :</p><p>${delivery_cookies.firstName} ${delivery_cookies.lastName}</p><p>${delivery_cookies.adress}, ${delivery_cookies.postale}, ${delivery_cookies.city}</p><p>${delivery_cookies.phone}</p>`
 document.getElementById('abstract').insertAdjacentHTML("afterbegin", delivering_infos)
+
 </script>
 {% endblock %}

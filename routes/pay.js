@@ -16,6 +16,7 @@ router.post('/', function(req, res, next) {
 		"sk_test_8wvNaHZbOntAvBJrCt5QxhWN"
 	);
 	const token = req.body.id_token;
+	var price = req.body.price.split('.').join("")
 	// stripe.customers.create({
 	// 	description: 'Customer for sophia.brown@example.com',
 	// 	source: token
@@ -59,10 +60,8 @@ router.post('/', function(req, res, next) {
 	// 	}
 	// })
 
-
-
-	const charge = stripe.charges.create({
-		amount: 999,
+	stripe.charges.create({
+		amount: price,
 		currency: 'eur',
 		source: token,
 		receipt_email: 'alexandre.betourne.pro@gmail.com'
