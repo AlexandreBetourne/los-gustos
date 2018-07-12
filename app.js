@@ -7,7 +7,6 @@ var mysql = require('mysql')
 var session = require('express-session')
 var logger = require('morgan');
 require('dotenv').config();
-var bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
 var resultsRouter = require('./routes/results');
@@ -19,6 +18,7 @@ var deliveryRouter = require('./routes/delivery');
 var payRouter = require('./routes/pay');
 var confirmRouter = require('./routes/confirm');
 var profileRouter = require('./routes/profile');
+var profileModRouter = require('./routes/profile_modify');
 
 var app = express();
 
@@ -52,6 +52,7 @@ app.use('/delivery', deliveryRouter);
 app.use('/pay', payRouter);
 app.use('/confirm', confirmRouter);
 app.use('/profile', profileRouter);
+app.use('/profileModify', profileModRouter);
 
 
 // catch 404 and forward to error handler

@@ -36,14 +36,14 @@ card.addEventListener('change', function(event) {
 
 var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(event) {
-	// event.preventDefault();
+	event.preventDefault();
 	stripe.createToken(card).then(function(result) {
 		if (result.error) {
 			var errorElement = document.getElementById('card-errors');
 			errorElement.textContent = result.error.message;
 		} else {
-			console.log(result.token.card);
-			// stripeTokenHandler(result.token);
+			document.querySelector("input[name='id_token']").value = result.token.id;
+			form.submit();
 		}
 	});
 });

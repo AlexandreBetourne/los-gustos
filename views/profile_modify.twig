@@ -1,6 +1,6 @@
 {% extends '_layout.twig' %}
 
-{% set title = 'Profile | Los Gustos' %}
+{% set title = 'Modifier mon profile | Los Gustos' %}
 
 
 {% block content %}
@@ -9,14 +9,13 @@
     <div class="container">
       <a href="logout">Deconnection</a>
       <h1 class="upper is-size-2 has-text-centered bold mg-b7">profil</h1>
-      <hr>
       <form class="" method="post">
-        <input type="text" name="" value="{{ firstName }}">
-        <input type="text" name="" value="{{ lastName }}">
-        <input type="text" name="" value="{{ email }}">
-        <input type="text" name="" value="{{ adress }}">
-        <input type="text" name="" value="{{ postal }}">
-        <input type="text" name="" value="{{ city }}">
+        <input type="text" name="firstname" value="{{ firstName }}">
+        <input type="text" name="lastname" value="{{ lastName }}">
+        <input type="text" name="email" value="{{ email }}">
+        <input type="text" name="adress" value="{{ adress }}">
+        <input type="text" name="postal" value="{{ postal }}">
+        <input type="text" name="city" value="{{ city }}">
         <input type="submit" class="btn mainbtn upper bold" name="" value="valider">
         <a href="#" class="has-text-centered bold upper block">Annuler</a>
       </form>
